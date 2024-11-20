@@ -1,14 +1,26 @@
+/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black; /* Fondo negro */
+    background: url('sebva.jpg') no-repeat center center;
+    background-size: contain; /* Ajusta la imagen al contenedor sin recortar */
+    background-attachment: fixed; /* Fija la imagen al fondo mientras se hace scroll */
+    color: white; /* Cambia el texto a blanco por defecto */
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background-color: black;
     padding: 1em 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header quede arriba */
 }
 
 header ul {
@@ -25,20 +37,32 @@ header ul li {
 header ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+header ul li a:hover {
+    color: #f0f0f0; /* Color de hover más suave */
+}
+
+/* Hero Section */
 .hero {
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
     color: white;
     text-align: center;
     padding: 5em 0;
+    margin-top: 80px; /* Deja espacio por el header fijo */
 }
 
+/* General Section */
 section {
     padding: 2em;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo ligeramente oscuro para las secciones */
+    margin-top: 10px;
 }
 
+/* Portfolio */
 .portfolio .projects {
     display: flex;
     justify-content: center;
@@ -46,13 +70,18 @@ section {
 }
 
 .project {
-    border: 1px solid #ccc;
+    background-color: #333; /* Fondo más oscuro para los proyectos */
+    border: 1px solid #555; /* Borde más suave */
     padding: 1em;
     width: 200px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 1em 0;
