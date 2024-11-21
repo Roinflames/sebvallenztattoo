@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     background-color: black; /* Fondo negro */
     background: url('sebva.jpg') no-repeat center center;
-    background-size: contain; /* Ajusta la imagen al contenedor sin recortar */
+    background-size: 65%; /* Ajusta la imagen al contenedor sin recortar */
     background-attachment: fixed; /* Fija la imagen al fondo mientras se hace scroll */
     color: white; /* Cambia el texto a blanco por defecto */
 }
