@@ -1,12 +1,27 @@
 /* General */
 body {
-    background-color: white; /* Fondo blanco */
+    background-color: black; 
+    /* background-color: white;  */
     box-sizing: border-box;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%; /* Asegura que ocupe toda la altura del viewport */
+}
+
+.background {
+    background: url('sebva.jpg') no-repeat center center; 
+    background: url('black.jpg') no-repeat center center; 
+    background-size: 70%;
+    background-attachment: fixed;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -1; 
+    animation: girar 120s linear infinite; 
 }
 
 /* Header */
@@ -54,21 +69,6 @@ section {
     text-align: center;
     margin-top: 10px;
 }
-
-.background {
-    background: url('sebva.jpg') no-repeat center center; /* Centra la imagen */
-    background-size: 70%; /* Asegura que la imagen cubra todo el área visible */
-    background-attachment: fixed; /* Fija la imagen mientras se hace scroll */
-    position: fixed; /* Fondo fijo */
-    top: 0;
-    left: 0;
-    width: 100%; /* El fondo ocupa el 100% del ancho */
-    height: 100%; /* El fondo ocupa el 100% de la altura */
-    z-index: -1; /* Coloca el fondo detrás de otros elementos */
-    animation: girar 120s linear infinite; /* Aplicando la animación de giro */
-}
-
-
 
 /* Portfolio */
 .portfolio .projects {
