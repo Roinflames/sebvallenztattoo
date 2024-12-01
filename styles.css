@@ -50,8 +50,9 @@ header ul li a:hover {
     background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
     color: white;
     text-align: center;
-    padding: 5em 0;
-    margin-top: 80px; /* Deja espacio por el header fijo */
+    padding: 3em 0 2.5em 0; /* Agrega más espacio arriba */
+    margin-top: 4%; /* Baja el bloque un poco */
+    font-size: 30px;
 }
 
 /* General Section */
