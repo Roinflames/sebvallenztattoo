@@ -1,14 +1,12 @@
 /* General */
 body {
+    background-color: white; /* Fondo blanco */
+    box-sizing: border-box;
+    color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: black; /* Fondo negro */
-    background: url('sebva.jpg') no-repeat center center;
-    background-size: 65%; /* Ajusta la imagen al contenedor sin recortar */
-    background-attachment: fixed; /* Fija la imagen al fondo mientras se hace scroll */
-    color: white; /* Cambia el texto a blanco por defecto */
+    height: 100%; /* Asegura que ocupe toda la altura del viewport */
 }
 
 /* Header */
@@ -47,21 +45,30 @@ header ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
-    color: white;
-    text-align: center;
-    padding: 3em 0 2.5em 0; /* Agrega más espacio arriba */
-    margin-top: 4%; /* Baja el bloque un poco */
-    font-size: 30px;
+    margin-top: 60px; /* Asegura espacio suficiente para no superponer con el header */
 }
 
 /* General Section */
 section {
     padding: 2em;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo ligeramente oscuro para las secciones */
     margin-top: 10px;
 }
+
+.background {
+    background: url('sebva.jpg') no-repeat center center; /* Centra la imagen */
+    background-size: 70%; /* Asegura que la imagen cubra todo el área visible */
+    background-attachment: fixed; /* Fija la imagen mientras se hace scroll */
+    position: fixed; /* Fondo fijo */
+    top: 0;
+    left: 0;
+    width: 100%; /* El fondo ocupa el 100% del ancho */
+    height: 100%; /* El fondo ocupa el 100% de la altura */
+    z-index: -1; /* Coloca el fondo detrás de otros elementos */
+    animation: girar 120s linear infinite; /* Aplicando la animación de giro */
+}
+
+
 
 /* Portfolio */
 .portfolio .projects {
@@ -88,3 +95,19 @@ footer {
     padding: 1em 0;
     margin-top: 2em;
 }
+
+@keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .background {
+        background-attachment: scroll; /* En móviles, el fondo se desplaza con el contenido */
+    }
+}
+
