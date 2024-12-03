@@ -4,10 +4,13 @@ body {
     /* background-color: white;  */
     box-sizing: border-box;
     color: white;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     height: 100%; /* Asegura que ocupe toda la altura del viewport */
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
 }
 
 .background {
@@ -27,12 +30,12 @@ body {
 /* Header */
 header {
     background-color: black;
-    padding: 1em 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
     left: 0;
+    padding: 1em 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
     z-index: 1000; /* Asegura que el header quede arriba */
 }
 
@@ -61,6 +64,7 @@ header ul li a:hover {
 /* Hero Section */
 .hero {
     margin-top: 60px; /* Asegura espacio suficiente para no superponer con el header */
+    flex: 1; /* Toma el espacio disponible para empujar el footer hacia abajo */
 }
 
 /* General Section */
@@ -92,8 +96,8 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
+    /* padding: 1em 0; */
+    /* margin-top: 2em; */
 }
 
 @keyframes girar {
